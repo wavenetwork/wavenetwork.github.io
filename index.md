@@ -60,7 +60,8 @@ high pass filter 가 4개, low pass filter 가 4개 사용됨. (== bandpass filt
 3. 압축 풀려서 잘 설치되었다는 메세지 확인.
 4. 좌측 상단의 i 모양 아이콘 클릭
 5. 나타난 목록 중, wavenet-transmitter.mmp(또는, wavenet-receiver.mmp)란 파일을 클릭
-6. 가운데 동그라미 동글동글을 누르면, 사운드가 발사됨.
+6. 발신기 앱의 가운데 버튼을 누르면, 신호가 발사됨.
+7. 수신기 앱의 가운데 버튼에 빨간 불이 켜지면, 신호가 수신된 것임.
 
 ---
 
