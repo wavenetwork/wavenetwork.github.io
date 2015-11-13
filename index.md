@@ -69,12 +69,11 @@ high pass filter 가 4개, low pass filter 가 4개 사용됨. (== bandpass filt
 
 * 클릭하여 다운로드 <http://wavenetwork.github.io/wavenet.zip>
 
-<img src="03.png" width=200px />
+<img src="02.png" width=200px />
 
 * 다운로드 된거 (wavenet.zip), 클릭하여 열기. 이때, MubMuPlat으로 열기를 선택!
 
 <img src="04.png" width=200px />
-<img src="06.png" width=200px />
 <img src="07.png" width=200px />
 
 * 압축 풀려서 잘 설치되었다는 메세지 확인.
@@ -92,10 +91,11 @@ high pass filter 가 4개, low pass filter 가 4개 사용됨. (== bandpass filt
 * 발신기 앱의 가운데 버튼을 누르면, 신호가 발사됨.
 
 <img src="11.png" width=200px />
+<img src="12.png" width=200px />
 
 * 수신기 앱의 가운데 버튼에 빨간 불이 켜지면, 신호가 수신된 것임.
 
-<img src="11.png" width=200px />
+<img src="13.png" width=200px />
 
 ---
 
