@@ -1,30 +1,41 @@
 ## wavenet 사용 매뉴얼 (TESTING)
 
 ```
-[>> English-version](index-eng.md)
+[>> English-version](index-eng.md) // UNIMPLEMENTED
 ```
 
 ---
 
 ### 소개
 
+#### 발신기
+
 <img src="wavenet-transmitter.png" width=200px />
 
 요걸로, 17~19kHz 까지 주파수를 선택해서 발신. 발신기.
 
+#### 수신기
+
 <img src="wavenet-receiver.png" width=200px />
 
 요걸로, 17~19kHz 까지 주파수를 선택해서 수신. 수신기.
-이때, 원하는 주파수만을 강조하기 위해, 다른 주파수 대역의 소리의 크기를 죽이는 필터를 사용하는데.
-high pass filter 가 동일 주파수에 4개, low pass filter 가 동일 주파수에 4개 사용됨. (bandpass filter 4개라고 말해도 되공...)
-이 두 필터의 중심 주파수를 수신하고자 하는 주파수의 주변에 배치해서.. 원하는 주파수를 포함하는 특정 밴드(band)의 소리만을 듣는다.
+패스밴드의 폭을 0.1~2.1kHz까지 가변할 수 있음.
+기타 신호감지를 개선하는 기능 계속 추가해 나가야할 듯.
 
-이 밴드의 폭을 100Hz에서 2.1kHz 까지, 좁게 혹은 넓게 설정할 수 있다.
+#### 패스밴드에 대해서...
 
-이렇게 하는 이유는, 필터의 효과가 사실은 원하는 주파수 대역에도 신호감쇄의 효과를 미치기 때문에, 100Hz 처럼, 정확하게 신호를 잡아내려고 하면, 그만큼 들리는 신호의 크기도 작아지는 효과가 있기 때문에,
-바꿔보면서, 테스트해볼 필요가 있다고 생각했기 때문임.
+원하는 주파수만을 강조하기 위해, 다른 주파수 대역의 소리의 크기를 죽이는 필터를 사용하는데.
+high pass filter 가 4개, low pass filter 가 4개 사용됨. (== bandpass filter 4개라고 말해도 되공...)
+이 두 필터 세트의 중심 주파수를 수신하고자 하는 주파수의 주변에 배치해서.. 원하는 주파수를 포함하는 특정 밴드(band)의 소리만을 듣는다.
 
-<https://en.wikipedia.org/wiki/Bandwidth_(signal_processing)#X-dB_bandwidth> 의 그림 참고!
+이 밴드의 폭을 100Hz에서 2.1kHz 까지, 좁게 혹은 넓게 설정할 수 있다는 말임.
+아래 그림 참고.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Bandwidth_2.svg/300px-Bandwidth_2.svg.png" width=400px>
+
+출처 : <https://en.wikipedia.org/wiki/Bandwidth_(signal_processing)#X-dB_bandwidth>
+
+이렇게 해본 이유는, 필터의 효과가 사실은 원하는 주파수 대역에도 신호감쇄의 효과를 미치기 때문에, 100Hz 처럼, 정확하게 신호를 잡아내려고 하면, 그만큼 들리는 신호의 크기도 작아지는 효과가 있지 않을까 염려되어서, 밴드폭을 바꿔보면서, 테스트해볼 필요가 있다고 생각했기 때문임. (사실, 잠깐 실험해 본 바로는 별로, 상관이 없는 것 같아 보였음)
 
 ---
 
